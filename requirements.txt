@@ -1,6 +1,6 @@
-tensorflow
-h5py
-flask
-pillow
-numpy
-gunicorn
+tensorflow==2.18.0
+h5py==3.11.1
+flask==3.0.3
+pillow==10.4.0
+numpy>=1.26.4
+gunicorn==22.0.0
