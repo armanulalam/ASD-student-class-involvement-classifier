@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ensemble Image Classifier</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Ensemble Image Classifier</h1>
+
+    <div class="upload-box" id="uploadBox">
+      <input type="file" id="fileInput" accept="image/png, image/jpeg, image/webp" hidden>
+      <div id="dropText">
+        <p>📤 Click here to upload Image</p>
+        <p class="hint">Or drag and drop (PNG / JPG / WEBP)</p>
+      </div>
+      <img id="previewImg" src="" alt="preview" hidden>
+    </div>
+
+    <button id="predictBtn" disabled>Predict</button>
+
+    <div id="loader" class="loader" hidden></div>
+
+    <div id="resultBox" class="result-box" hidden>
+      <h2>Result</h2>
+      <p><strong>Predicted Class:</strong> <span id="predClass"></span></p>
+      <p><strong>Confidence:</strong> <span id="predConf"></span></p>
+      <div id="probList"></div>
+    </div>
+
+    <div id="errorBox" class="error-box" hidden></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
